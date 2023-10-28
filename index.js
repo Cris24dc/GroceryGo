@@ -5,7 +5,6 @@ import path from "path";
 import connectToMongoDB from "./start/db.js";
 import routes from "./start/routes.js";
 
-
 const PORT = process.env.PORT || 3000;
 const app = express();
 
@@ -14,7 +13,6 @@ app.use(express.json());
 connectToMongoDB();
 
 routes(app);
-
 
 app.use(express.static("static"));
 app.use(
@@ -42,6 +40,6 @@ app.use(
   )
 );
 
-
-
 app.listen(PORT, () => console.log("api running..."));
+
+app.get("/", (req, res) => res.json("here is the get route"));
