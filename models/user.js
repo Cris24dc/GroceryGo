@@ -69,7 +69,6 @@ const marketSchema = new mongoose.Schema({
     },
     image:{
         type: Buffer,
-        required: true,
     },
 
     //Se creaza un array de obiecte bazate pe modelul de produs
