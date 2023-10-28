@@ -23,7 +23,15 @@
           <p class="logo-txt">Account</p>
         </div>
       </div>
-      <div class="main-con"></div>
+      <div class="main-con">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+          <input type="file" name="image" accept="image/*" />
+          <input type="submit" value="Upload Image" />
+        </form>
+        <p class="name-txt">Nume</p>
+        <button class="logout">LogOut</button>
+        <button class="delete">Delete Account</button>
+      </div>
       <div class="nav-con">
         <a href="./customer-home.html" class="link-con"
           ><img src="../img/home.png" alt="" class="link-img"
