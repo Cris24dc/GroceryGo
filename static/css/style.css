@@ -4,7 +4,6 @@ body {
 
 /*nav*/
 .nav {
-  background-color: aquamarine;
   height: 10vh;
   display: flex;
   padding: 1rem;
@@ -23,4 +22,31 @@ body {
   padding-left: 0.8rem;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+/*main*/
+
+.main-con {
+  margin-top: 15vh;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-con {
+  background-color: #42b85f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85vw;
+  margin: 2rem;
+  border-radius: 1.5rem;
+  padding: 1.2rem;
+}
+
+.link-con p {
+  font-size: 2rem;
+  color: #ffff;
 }
