@@ -78,7 +78,7 @@ const marketSchema = new mongoose.Schema({
 
 // se creaza variabile dupa modlele de sus pentru a putea fi folosite in restul aplicatiei
 const User = mongoose.model("User", userSchema);
-const Market = mongoose.model("User", marketSchema);
+const Market = mongoose.model("Market", marketSchema);
 
 // functie de validare pentru user
 function validateUser(user) {
