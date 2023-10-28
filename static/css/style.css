@@ -1,0 +1,26 @@
+body {
+  background-color: #d6d6d6;
+}
+
+/*nav*/
+.nav {
+  background-color: aquamarine;
+  height: 10vh;
+  display: flex;
+  padding: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 2.5rem;
+}
+
+.logo-txt {
+  padding-left: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
