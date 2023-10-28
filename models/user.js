@@ -1,6 +1,16 @@
 import mongoose from "mongoose";
 import Joi from "joi";
 
+const photoSchema = new mongoose.Schema({
+    name: String,
+    image: {
+        data: Buffer,
+        contentType: String,
+    },
+});
+
+const Photo = mongoose.model('Photo', photoSchema);
+
 //model pentru user
 const userSchema = new mongoose.Schema({
     userType: {
@@ -23,6 +33,10 @@ const userSchema = new mongoose.Schema({
     moneySaved: {
         type: Number,
         default: 0,
+    },
+    profilePhoto: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Photo',
     },
 });
 //model pentru produs
@@ -48,6 +62,8 @@ const productSchema = new mongoose.Schema({
         required: true,
     }
 })
+
+const Product = mongoose.model('Product', productSchema);
 //model pentru magazin
 const marketSchema = new mongoose.Schema({
     userType: {
@@ -67,12 +83,16 @@ const marketSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    image:{
-        type: Buffer,
-    },
 
     //Se creaza un array de obiecte bazate pe modelul de produs
-    products: [productSchema],
+    products: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'produyct',
+    }],
+    profilePhoto: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Photo',
+    },
 })
 
 // se creaza variabile dupa modlele de sus pentru a putea fi folosite in restul aplicatiei
