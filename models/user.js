@@ -50,6 +50,10 @@ const productSchema = new mongoose.Schema({
 })
 //model pentru magazin
 const marketSchema = new mongoose.Schema({
+    userType: {
+        type: String,
+        default: "market",
+    },
     name: {
         type: String,
         required: true,
