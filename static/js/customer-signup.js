@@ -1,6 +1,6 @@
 const form = document.getElementById('register-form');
 
-form.addEventListener('submit', registerCustomer)
+form.addEventListener('submit', registerCustomer);
 
 async function registerCustomer(event){
     event.preventDefault();
